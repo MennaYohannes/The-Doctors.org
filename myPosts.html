@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Posts </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous">
+</script>
+</head>
+<body>
+<div id="page">
+     <div class="nav-bar">
+        <div class="pic-name-wrapper">
+            <div class="my-proPic">
+                <img src="profile pictures/user.png">
+            </div>
+            <div class="myname">
+
+            </div>
+        </div>
+        <div class="left-side">
+            <div class="nav-link">  <a href="index.html">home</a>  </div>
+            <div class="nav-link active-nav-link"> <a href="myPosts.html">my posts</a> </div>
+            <div class="nav-link"> <a href="about.html">about</a> </div>
+        </div>
+
+         <div class="right-side">THE DOCTORS.org</div>
+
+    </div>
+    <div class="main-container" > 
+         
+                <div class="box">
+                    <div class="post"><img src="posts/444.png" class="active"></div>
+                </div>
+                <div class="box">
+                    <div class="post"><video src="posts/vid2.mp4" controls></video></div>
+                </div>
+                <div class="box">
+                <div class="post"> <img src="posts/123.jpg"></div>
+                </div>
+                <div class="box">
+                  <div class="post"><video src="posts/vid3.mp4" controls></video></div>  
+                </div>
+                <div class="box">
+                   <div class="post"><video src="posts/vid4.mp4" controls></video></div> 
+                </div>
+                <div class="box">
+                   <div class="post"> <img src="posts/333.jpg"></div> 
+                </div>
+                <div class="box">
+                    <div class="post"> <img src="posts/999.jpg"></div> 
+                 </div>
+                 <div class="box">
+                    <div class="post"> <img src="posts/666.jpg"></div> 
+                 </div>
+                
+                
+    </div>
+    <button id="open">OPEN IN SLIDE VIEW</button>
+</div>            
+            <div id="open-wide">
+                <button></button>
+                <div id="controls">
+                    <img src="interactions/arrow-left.png" class="prev" alt="Prev">
+                    <img src="interactions/arrow-right.png" class="next" alt="Next">
+                </div>
+            <div id="slider-outer">
+                
+                 <div id="slider-inner"></div>  
+                
+                </div>
+            </div>
+
+</body>
+<script src="slider.js"></script>
+<script src="displayUserInfo.js"></script>
+<script>
+    var user = JSON.parse(localStorage.getItem("userInfo"));
+if( user === null){
+alert("You are not a user. So please create an account and login.")
+}
+</script>
+</html>

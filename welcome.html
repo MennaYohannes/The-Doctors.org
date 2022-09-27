@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">
+    <div id="welcome-content">
+        <h1> THE DOCTORS.org </h1><div id="name"></div>
+    </div>
+    <div class="content-holder">
+    <div class="left-side-content">
+        <img src="profile pictures/images4.jpg" >
+    </div>
+    <div class="right-side-content">
+        
+        <div id="list">
+        <ul>
+            <h3>Welcome to our website. </h3>
+            <li>Sponsored by group of doctors worldwide, this site presents broader information on the doctor's experience,
+             Not only offering information on conditions and treatments, but tips for patients on choosing a doctor and understanding medical situations.
+             Also provides helpful information on children’s health and development issues.</li>
+            <li>Doctors create an account in order to share their experience and create a friendly platform.</li>
+        </ul>
+
+        
+    <div id="pic-wrapper">
+        <img src="profile pictures/user.png">
+    </div>
+    <div id="username-wrapper">
+        <h3>YOUR USERNAME IS </h3> <a href="index.html" id="username"></a>
+    </div>
+    <input id="btn-next" type="submit" value="GET STARTED" onclick="goHome()">
+</div></div>
+    <script>
+
+function goHome(){
+    window.document.location = "index.html";
+}
+var user = JSON.parse(localStorage.getItem("userInfo"));
+
+        document.querySelector('#name').textContent = user.firstName + " " + user.lastName;
+        document.querySelector('#username').textContent = user.userName;
+        console.log(user.profile)
+        document.querySelector('#pic-wrapper').getElementsByTagName('img')[0].src = "profile pictures/" + user.profile;
+   </script>
+       <script>
+        var user = JSON.parse(localStorage.getItem("userInfo"));
+if( user === null){
+    alert("You are not a user. So please create an account and login.")
+}
+    </script>
+</body>
+</html>

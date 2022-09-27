@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Home Page</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="nav-bar">
+            <div class="pic-name-wrapper">
+                <div class="my-proPic">
+                    <img src="profile pictures/user.png">
+                </div>
+                <div class="myname">
+
+                </div>
+            </div>
+            <div class="left-side">
+                <div class="nav-link active-nav-link">  <a href="index.html">home</a>  </div>
+                <div class="nav-link"> <a href="myPosts.html">my posts</a> </div>
+                <div class="nav-link"> <a href="about.html">about</a> </div>
+            </div>
+
+             <div class="right-side">THE DOCTOR.ORG</div>
+
+        </div>
+    </div>
+    <div id="postSomething">
+        <textarea type="text" spellcheck="true" placeholder="Post something..." size="50"></textarea>
+       <div id="post-buttons-wrapper">
+        <div id="post">
+            <button>POST</button>
+        </div>
+        <div id="media">
+        <input type="file" id="real-file" hidden="hidden"/>
+        <button type="button" id="custom-button"  title="Choose from posts/ folder"><img id="img" src="interactions/picture.png"></button>
+        </div>
+    </div>
+    </div>
+
+   <div class="content">
+        <div class="items-wrapper">    
+        
+        </div>
+    </div>
+       
+    <script src="buildPosts.js"></script>
+    <script src="darken.js"></script>
+    <script src="displayUserInfo.js"></script>
+    <script>
+        var user = JSON.parse(localStorage.getItem("userInfo"));
+if( user === null){
+    alert("You are not a user. So please create an account and login.")
+}
+    </script>
+</body>
+</html>

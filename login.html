@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="login-page">
+
+<div id="login-box"> 
+    <h1>Login</h1>
+   <form action="index.html" id="login">
+    <div class="textbox">
+        <input name="email" type="email" size="30" placeholder="Email" required/>
+    </div>
+
+    <div class="textbox">
+        <input name="password" type="password" size="30" placeholder="Password" required/>
+    </div>
+
+    <input class="btn" type="submit" size="30" value="Login" />
+
+ </form>
+    <button id="sign-up" onclick="goToCreateAccount()">SIGN UP</button>
+</div>
+<script>
+ function goToCreateAccount(){
+     window.document.location = "createAccount.html";
+ }
+</script>
+<script src="validateLogin.js"></script>
+</body>
+
+</html>

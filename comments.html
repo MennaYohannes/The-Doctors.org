@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Comments</title>
+</head>
+<body onload="loadComments()">
+    <div class="container">
+        <div class="nav-bar">
+            <div class="pic-name-wrapper">
+                <div class="my-proPic">
+                    <img src="profile pictures/user.JPG">
+                </div>
+                <div class="myname">
+
+                </div>
+            </div>
+             <div class="left-side">
+                 <div class="nav-link active-nav-link">  <a href="index.html">home</a>   </div>
+                 <div class="nav-link"> <a href="myPosts.html">my posts</a> </div>
+                 <div class="nav-link"> <a href="about.html">about</a> </div>
+             </div>
+
+             <div class="right-side">news foundation</div>
+
+        </div>
+    </div>
+    <div class="comments-wrapper">
+        <div class="top-part">
+            <div class="btnBack"><button onclick="goBack()"></button></div> 
+            <div class="commentstxt">Comments</div>
+        </div>
+        <div class="comment-area">
+            <textarea placeholder="Write a comment..." spellcheck="true"></textarea>
+            <button id="btnReset" style="background-image: url(interactions/cancel.png)"></button>
+            <button id="btnSend" style="background-image: url(interactions/send.png)"></button>
+        </div>
+        
+        <div class="replying-to"></div>
+        <button id="btnCancel" style="background-image: url(interactions/delete.png)"></button>
+        <div class="comment-count"></div>
+    </div>
+    <script src="displayComments.js"></script>
+    <script src="displayUserInfo.js"></script>
+    <script>
+        var user = JSON.parse(localStorage.getItem("userInfo"));
+if( user === null){
+    alert("You are not a user. So please create an account and login.")
+}
+    </script>
+</body>
+</html>

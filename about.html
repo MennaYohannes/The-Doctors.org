@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="pic-name-wrapper">
+                <div class="my-proPic">
+                    <img src="profile pictures/user.png">
+                </div>
+                <div class="myname">
+    
+                </div>
+            </div>
+             <div class="left-side">
+                 <div class="nav-link"><a href="index.html">home</a>   </div>
+                 <div class="nav-link"> <a href="myPosts.html">my posts</a> </div>
+                 <div class="nav-link active-nav-link"> <a href="about.html">about</a> </div>
+             </div>
+
+             <div class="right-side">THE DOCTORS.ORG</div>
+
+        </div>
+    </div>
+
+    <div class="content-holder">
+        <div class="left-side-content">
+            <img src="profile pictures/user.png" >
+        </div>
+        <div class="right-side-content">
+            <h1>STATUS</h1>
+            <div id="list">
+            <ul>
+                <li>FIRST NAME : <div class="status-desc"></div></li>
+                <li>LAST NAME : <div class="status-desc"></div></li>
+                <li>EMAIL : <div class="status-desc"></div></li>
+                <li>COUNTRY : <div class="status-desc"></div></li>
+                <li>GENDER : <div class="status-desc"></div></li>
+                <li>USER NAME : <div class="status-desc"></div></li>
+            </ul>
+
+            </div>   
+        </div>
+    </div>
+    <script src="displayUserInfo.js"></script>
+    <script src="status.js"></script>
+
+    <script>
+        var user = JSON.parse(localStorage.getItem("userInfo"));
+if( user === null){
+    alert("You are not a user. So please create an account and login.")
+}
+    </script>
+</body>
+</html>

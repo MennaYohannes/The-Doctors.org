@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Photo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">
+<form action="welcome.html">
+    <h1>PLEASE CHOOSE A PHOTO FOR YOUR PROFILE</h1>
+   
+    <div id="user-image"><img src="profile pictures/download.png" alt=""></div>
+<div id="buttons">
+    <div id="choose">
+        <input type="file" id="real-file" hidden="hidden"/>
+        <button type="button" id="choose-button" title="Choose from profile pictures/ folder">CHOOSE PHOTO</button>
+    </div>
+    
+    <input id="btn-next" type="submit" value="NEXT">
+</div>
+</form>
+</div>
+    <script>
+
+const realFileBtn = document.getElementById("real-file");
+const customBtn = document.getElementById("choose-button");
+var str;
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+    str = "user.png";
+  if (realFileBtn.value) {  
+    str = realFileBtn.value.match(
+      /[\/\\]([\w\d\s\.\-\(\)]+)$/
+    )[1];
+var user = JSON.parse(localStorage.getItem("userInfo"));
+user.profile = str;
+var user_serialized = JSON.stringify(user);
+localStorage.setItem("userInfo",user_serialized);
+} 
+});
+
+   </script>
+</body>
+</html>
